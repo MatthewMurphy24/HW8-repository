@@ -1,0 +1,454 @@
+﻿
+insert into guestcategory (category_id, name, discount) values
+(1, 'Regular', 0.00),
+(2, 'Gold',    10.00);
+
+insert into hotel (hotel_id, name, address) values
+(1, 'Hotel A', '100 Ocean Drive, Miami, FL'),
+(2, 'Hotel B', '200 Broadway, New York, NY'),
+(3, 'Hotel C', '300 Sunset Blvd, Los Angeles, CA'),
+(4, 'Hotel D', '400 Lakeshore Dr, Chicago, IL'),
+(5, 'Hotel E', '500 Peachtree St, Atlanta, GA');
+
+insert into hotelphone (hotel_id, phone_num) values
+(1, '305-100-0001'),
+(2, '212-200-0002'),
+(3, '310-300-0003'),
+(4, '312-400-0004'),
+(5, '404-500-0005');
+
+insert into hotelfeature (hotel_id, feature) values
+(1, 'Pool'), (1, 'Spa'),
+(2, 'Gym'),  (2, 'Restaurant'),
+(3, 'Pool'), (3, 'Parking'),
+(4, 'Gym'),  (4, 'Pool'),
+(5, 'Spa'),  (5, 'Restaurant');
+
+insert into season (season_id, name, start_date, end_date) values
+(1, 'Summer 2025',  '2025-06-01', '2025-08-31'),
+(2, 'Holiday 2025', '2025-12-15', '2026-01-05'),
+(3, 'Summer 2025',  '2025-06-01', '2025-08-31'),
+(4, 'Winter 2026',  '2026-01-10', '2026-03-15');
+
+insert into hotelseason (hotel_id, season_id) values
+(1, 1), (1, 2),
+(2, 3), (2, 4),
+(3, 1), (3, 2),
+(4, 3), (4, 4),
+(5, 1), (5, 2);
+
+insert into roomtype (type_id, room_name, size, capacity, hotel_id) values
+(1,  'single',  200, 1, 1),
+(2,  'double',  350, 2, 1),
+(3,  'single',  200, 1, 2),
+(4,  'double',  350, 2, 2),
+(5,  'single',  210, 1, 3),
+(6,  'suite',   600, 4, 3),
+(7,  'double',  360, 2, 4),
+(8,  'suite',   620, 4, 4),
+(9,  'single',  195, 1, 5),
+(10, 'double',  340, 2, 5);
+
+insert into roomtypefeature (type_id, feature) values
+(1, 'ocean view'), (2, 'ocean view'), (2, 'king bed'),
+(3, 'city view'),  (4, 'city view'),  (4, 'king bed'),
+(5, 'balcony'),    (6, 'balcony'),    (6, 'jacuzzi'),
+(7, 'lake view'),  (8, 'lake view'),  (8, 'fireplace'),
+(9, 'garden view'),(10, 'garden view');
+
+insert into room (room_num, floor, type_id) values
+(101, 1, 1), (102, 1, 1), (103, 2, 1),
+(104, 2, 2), (105, 3, 2), (106, 3, 2),
+(201, 1, 3), (202, 1, 3), (203, 2, 3),
+(204, 2, 4), (205, 3, 4), (206, 4, 4),
+(301, 1, 5), (302, 1, 5), (303, 2, 5),
+(304, 5, 6), (305, 5, 6), (306, 6, 6),
+(401, 2, 7), (402, 2, 7), (403, 3, 7),
+(404, 8, 8), (405, 8, 8), (406, 9, 8),
+(501, 1, 9), (502, 1, 9), (503, 2, 9),
+(504, 2, 10),(505, 3, 10),(506, 3, 10);
+
+
+insert into price (price_id, day_of_week, amount, type_id, season_id) values
+(1,  'monday',     89.00, 1, 1),
+(2,  'tuesday',    89.00, 1, 1),
+(3,  'wednesday',  89.00, 1, 1),
+(4,  'thursday',   95.00, 1, 1),
+(5,  'friday',    120.00, 1, 1),
+(6,  'saturday',  130.00, 1, 1),
+(7,  'sunday',    110.00, 1, 1),
+(8,  'monday',    110.00, 1, 2),
+(9,  'tuesday',   110.00, 1, 2),
+(10, 'wednesday', 110.00, 1, 2),
+(11, 'thursday',  120.00, 1, 2),
+(12, 'friday',    150.00, 1, 2),
+(13, 'saturday',  160.00, 1, 2),
+(14, 'sunday',    140.00, 1, 2),
+(15, 'monday',    140.00, 2, 1),
+(16, 'tuesday',   140.00, 2, 1),
+(17, 'wednesday', 140.00, 2, 1),
+(18, 'thursday',  155.00, 2, 1),
+(19, 'friday',    190.00, 2, 1),
+(20, 'saturday',  200.00, 2, 1),
+(21, 'sunday',    175.00, 2, 1),
+(22, 'monday',    170.00, 2, 2),
+(23, 'tuesday',   170.00, 2, 2),
+(24, 'wednesday', 170.00, 2, 2),
+(25, 'thursday',  185.00, 2, 2),
+(26, 'friday',    220.00, 2, 2),
+(27, 'saturday',  235.00, 2, 2),
+(28, 'sunday',    210.00, 2, 2),
+(29, 'monday',     95.00, 3, 3),
+(30, 'tuesday',    95.00, 3, 3),
+(31, 'wednesday',  95.00, 3, 3),
+(32, 'thursday',  100.00, 3, 3),
+(33, 'friday',    125.00, 3, 3),
+(34, 'saturday',  135.00, 3, 3),
+(35, 'sunday',    115.00, 3, 3),
+(36, 'monday',     80.00, 3, 4),
+(37, 'tuesday',    80.00, 3, 4),
+(38, 'wednesday',  80.00, 3, 4),
+(39, 'thursday',   85.00, 3, 4),
+(40, 'friday',    100.00, 3, 4),
+(41, 'saturday',  110.00, 3, 4),
+(42, 'sunday',     90.00, 3, 4),
+(43, 'monday',    150.00, 4, 3),
+(44, 'tuesday',   150.00, 4, 3),
+(45, 'wednesday', 150.00, 4, 3),
+(46, 'thursday',  165.00, 4, 3),
+(47, 'friday',    200.00, 4, 3),
+(48, 'saturday',  215.00, 4, 3),
+(49, 'sunday',    185.00, 4, 3),
+(50, 'monday',    130.00, 4, 4),
+(51, 'tuesday',   130.00, 4, 4),
+(52, 'wednesday', 130.00, 4, 4),
+(53, 'thursday',  145.00, 4, 4),
+(54, 'friday',    170.00, 4, 4),
+(55, 'saturday',  180.00, 4, 4),
+(56, 'sunday',    155.00, 4, 4),
+(57, 'monday',     92.00, 5, 1),
+(58, 'tuesday',    92.00, 5, 1),
+(59, 'wednesday',  92.00, 5, 1),
+(60, 'thursday',   98.00, 5, 1),
+(61, 'friday',    122.00, 5, 1),
+(62, 'saturday',  132.00, 5, 1),
+(63, 'sunday',    112.00, 5, 1),
+(64, 'monday',    112.00, 5, 2),
+(65, 'tuesday',   112.00, 5, 2),
+(66, 'wednesday', 112.00, 5, 2),
+(67, 'thursday',  122.00, 5, 2),
+(68, 'friday',    152.00, 5, 2),
+(69, 'saturday',  162.00, 5, 2),
+(70, 'sunday',    142.00, 5, 2),
+(71, 'monday',    250.00, 6, 1),
+(72, 'tuesday',   250.00, 6, 1),
+(73, 'wednesday', 250.00, 6, 1),
+(74, 'thursday',  275.00, 6, 1),
+(75, 'friday',    320.00, 6, 1),
+(76, 'saturday',  340.00, 6, 1),
+(77, 'sunday',    300.00, 6, 1),
+(78, 'monday',    300.00, 6, 2),
+(79, 'tuesday',   300.00, 6, 2),
+(80, 'wednesday', 300.00, 6, 2),
+(81, 'thursday',  325.00, 6, 2),
+(82, 'friday',    380.00, 6, 2),
+(83, 'saturday',  400.00, 6, 2),
+(84, 'sunday',    355.00, 6, 2),
+(85, 'monday',    145.00, 7, 3),
+(86, 'tuesday',   145.00, 7, 3),
+(87, 'wednesday', 145.00, 7, 3),
+(88, 'thursday',  160.00, 7, 3),
+(89, 'friday',    195.00, 7, 3),
+(90, 'saturday',  210.00, 7, 3),
+(91, 'sunday',    180.00, 7, 3),
+(92, 'monday',    125.00, 7, 4),
+(93, 'tuesday',   125.00, 7, 4),
+(94, 'wednesday', 125.00, 7, 4),
+(95, 'thursday',  140.00, 7, 4),
+(96, 'friday',    165.00, 7, 4),
+(97, 'saturday',  175.00, 7, 4),
+(98, 'sunday',    150.00, 7, 4),
+(99,  'monday',    280.00, 8, 3),
+(100, 'tuesday',   280.00, 8, 3),
+(101, 'wednesday', 280.00, 8, 3),
+(102, 'thursday',  300.00, 8, 3),
+(103, 'friday',    350.00, 8, 3),
+(104, 'saturday',  370.00, 8, 3),
+(105, 'sunday',    330.00, 8, 3),
+(106, 'monday',    240.00, 8, 4),
+(107, 'tuesday',   240.00, 8, 4),
+(108, 'wednesday', 240.00, 8, 4),
+(109, 'thursday',  260.00, 8, 4),
+(110, 'friday',    295.00, 8, 4),
+(111, 'saturday',  310.00, 8, 4),
+(112, 'sunday',    275.00, 8, 4),
+(113, 'monday',     85.00, 9, 1),
+(114, 'tuesday',    85.00, 9, 1),
+(115, 'wednesday',  85.00, 9, 1),
+(116, 'thursday',   90.00, 9, 1),
+(117, 'friday',    115.00, 9, 1),
+(118, 'saturday',  125.00, 9, 1),
+(119, 'sunday',    105.00, 9, 1),
+(120, 'monday',    105.00, 9, 2),
+(121, 'tuesday',   105.00, 9, 2),
+(122, 'wednesday', 105.00, 9, 2),
+(123, 'thursday',  115.00, 9, 2),
+(124, 'friday',    145.00, 9, 2),
+(125, 'saturday',  155.00, 9, 2),
+(126, 'sunday',    135.00, 9, 2),
+(127, 'monday',    135.00, 10, 1),
+(128, 'tuesday',   135.00, 10, 1),
+(129, 'wednesday', 135.00, 10, 1),
+(130, 'thursday',  150.00, 10, 1),
+(131, 'friday',    185.00, 10, 1),
+(132, 'saturday',  195.00, 10, 1),
+(133, 'sunday',    170.00, 10, 1),
+(134, 'monday',    165.00, 10, 2),
+(135, 'tuesday',   165.00, 10, 2),
+(136, 'wednesday', 165.00, 10, 2),
+(137, 'thursday',  180.00, 10, 2),
+(138, 'friday',    215.00, 10, 2),
+(139, 'saturday',  225.00, 10, 2),
+(140, 'sunday',    200.00, 10, 2);
+
+insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone, category_id) values
+(1,  'passport', 'P1001', '10 Main St, Miami, FL',       '305-111-0001', '305-222-0001', 2),
+(2,  'passport', 'P1002', '20 Oak Ave, New York, NY',    '212-111-0002', '212-222-0002', 2),
+(3,  'license',  'L1003', '30 Pine Rd, Chicago, IL',     '312-111-0003', '312-222-0003', 1),
+(4,  'license',  'L1004', '40 Elm St, Atlanta, GA',      '404-111-0004', '404-222-0004', 1),
+(5,  'passport', 'P1005', '50 Cedar Ln, LA, CA',         '310-111-0005', '310-222-0005', 2),
+(6,  'license',  'L1006', '60 Maple Dr, Houston, TX',    '713-111-0006', '713-222-0006', 1),
+(7,  'passport', 'P1007', '70 Birch Blvd, Phoenix, AZ',  '602-111-0007', '602-222-0007', 1),
+(8,  'license',  'L1008', '80 Walnut Way, Seattle, WA',  '206-111-0008', '206-222-0008', 2),
+(9,  'passport', 'P1009', '90 Spruce Ct, Denver, CO',    '720-111-0009', '720-222-0009', 1),
+(10, 'license',  'L1010', '100 Ash Pl, Boston, MA',      '617-111-0010', '617-222-0010', 1);
+
+insert into occupant (occupant_id, first_name, last_name) values
+(1,  'john',    'smith'),
+(2,  'jane',    'smith'),
+(3,  'alice',   'johnson'),
+(4,  'bob',     'johnson'),
+(5,  'carlos',  'rivera'),
+(6,  'diana',   'prince'),
+(7,  'edward',  'norton'),
+(8,  'fiona',   'green'),
+(9,  'george',  'harris'),
+(10, 'helen',   'white'),
+(11, 'ivan',    'black'),
+(12, 'julia',   'brown'),
+(13, 'kevin',   'davis'),
+(14, 'laura',   'wilson'),
+(15, 'mike',    'taylor');
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id) values
+(1,  '2025-07-10', '2025-07-13', 3, 1),
+(2,  '2025-07-20', '2025-07-22', 4, 2),
+(3,  '2025-08-01', '2025-08-03', 5, 3),
+(4,  '2026-05-01', '2026-05-03', 1, 1),
+(5,  '2026-05-10', '2026-05-12', 2, 2),
+(6,  '2026-06-15', '2026-06-18', 1, 4),
+(7,  '2025-07-15', '2025-07-17', 2, 2),
+(8,  '2025-12-20', '2025-12-23', 6, 1),
+(9,  '2026-04-10', '2026-04-12', 7, 3),
+(10, '2026-03-05', '2026-03-07', 8, 5),
+(11, '2026-02-10', '2026-02-11', 9, 4),
+(12, '2026-03-15', '2026-03-16', 10, 5);
+
+insert into reservationroomtype (res_id, type_id, quantity) values
+(1, 1, 1), (1, 2, 1),
+(2, 3, 1), (2, 4, 1),
+(3, 6, 1),
+(4, 2, 2),
+(5, 4, 1),
+(6, 7, 1),
+(7, 4, 1),
+(8, 2, 1),
+(9, 5, 1),
+(10, 10, 2),
+(11, 8, 1),
+(12, 9, 1);
+
+insert into reservationoccupant (res_id, occupant_id) values
+(1, 3), (1, 4),
+(2, 4), (2, 6),
+(3, 5),
+(4, 1), (4, 2), (4, 7),
+(5, 1), (5, 2),
+(6, 1),
+(7, 1), (7, 2),
+(8, 8),
+(9, 9),
+(10, 10), (10, 11), (10, 12), (10, 13),
+(11, 13),
+(12, 14);
+
+insert into roomassignment (assignment_id, res_id, room_num, check_in, check_out) values
+(1, 1, 101, '2025-07-10', '2025-07-13'),
+(2, 1, 104, '2025-07-10', '2025-07-13'),
+(3, 2, 201, '2025-07-20', '2025-07-22'),
+(4, 2, 204, '2025-07-20', '2025-07-22'),
+(5, 3, 304, '2025-08-01', '2025-08-03'),
+(6, 7, 205, '2025-07-15', '2025-07-17');
+
+insert into roomoccupant (assignment_id, occupant_id) values
+(1, 3), (1, 4),
+(2, 3), (2, 4),
+(3, 4), (3, 6),
+(4, 4), (4, 6),
+(5, 5),
+(6, 1), (6, 2);
+
+insert into bill (bill_id, issue_date, total_amount, is_paid, res_id) values
+(1, '2025-07-13', 890.00,  true, 1),
+(2, '2025-07-22', 545.00,  true, 2),
+(3, '2025-08-03', 660.00,  true, 3),
+(4, '2025-07-17', 270.00,  true, 7);
+
+insert into servicecharge (service_id, res_id, service_type, amount, charge_date) values
+(1, 1, 'room service',  45.00, '2025-07-11'),
+(2, 1, 'spa',           80.00, '2025-07-12'),
+(3, 2, 'parking',       30.00, '2025-07-20'),
+(4, 3, 'room service',  55.00, '2025-08-02'),
+(5, 7, 'room service',  40.00, '2025-07-16'),
+(6, 7, 'minibar',       25.00, '2025-07-16');
+
+
+
+
+update price set amount = 50
+where type_id = 1 and season_id = 1 and day_of_week = 'wednesday';
+
+update price set amount = 100
+where type_id = 2 and season_id = 1 and day_of_week = 'wednesday';
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (13, '2025-07-15', '2025-07-17', 1, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (13, 2, 3);
+
+insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone, category_id)
+values (11, 'passport', 'P111111', '1 Main St', '111-1111', '222-2222', 2);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (14, '2025-07-15', '2025-07-17', 11, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (14, 1, 1);
+
+
+insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone, category_id)
+values (12, 'passport', 'P222222', '2 Oak St', '333-3333', '444-4444', 1);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (15, '2026-05-04', '2026-05-06', 12, 2);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (15, 4, 1);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (16, '2026-05-03', '2026-05-06', 1, 2);
+
+insert into roomassignment (assignment_id, res_id, room_num, check_in, check_out)
+values (7, 16, 204, '2026-05-03', '2026-05-06');
+
+insert into roomassignment (assignment_id, res_id, room_num, check_in, check_out)
+values (8, 15, 205, '2026-05-04', '2026-05-06');
+
+insert into roomoccupant (assignment_id, occupant_id) values (8, 1);
+insert into roomoccupant (assignment_id, occupant_id) values (8, 2);
+
+
+update guest set category_id = 2 where guest_id = 12;
+
+update reservation set check_in_date = '2025-07-03', check_out_date = '2025-07-05' where res_id = 15;
+
+update roomassignment set check_in = '2025-07-03', check_out = '2025-07-05' where assignment_id = 8;
+
+insert into servicecharge (service_id, res_id, service_type, amount, charge_date)
+values (7, 15, 'room service', 25.00, '2025-07-04');
+
+update roomassignment set check_out = '2025-07-05' where assignment_id = 8;
+
+insert into bill (bill_id, issue_date, total_amount, is_paid, res_id)
+values (5, '2025-07-05', 353.50, true, 15);
+
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (17, '2025-07-10', '2025-07-12', 12, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (17, 1, 1);
+
+insert into bill (bill_id, issue_date, total_amount, is_paid, res_id)
+values (6, '2025-07-12', 193.50, true, 17);
+
+
+
+update price set amount = 50
+where type_id = 1 and season_id = 1 and day_of_week = 'wednesday';
+
+update price set amount = 100
+where type_id = 2 and season_id = 1 and day_of_week = 'wednesday';
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (13, '2025-07-15', '2025-07-17', 1, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (13, 2, 3);
+
+insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone, category_id)
+values (11, 'passport', 'P111111', '1 Main St', '111-1111', '222-2222', 2);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (14, '2025-07-15', '2025-07-17', 11, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (14, 1, 1);
+
+
+insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone, category_id)
+values (12, 'passport', 'P222222', '2 Oak St', '333-3333', '444-4444', 1);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (15, '2026-05-04', '2026-05-06', 12, 2);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (15, 4, 1);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (16, '2026-05-03', '2026-05-06', 1, 2);
+
+insert into roomassignment (assignment_id, res_id, room_num, check_in, check_out)
+values (7, 16, 204, '2026-05-03', '2026-05-06');
+
+insert into roomassignment (assignment_id, res_id, room_num, check_in, check_out)
+values (8, 15, 205, '2026-05-04', '2026-05-06');
+
+insert into roomoccupant (assignment_id, occupant_id) values (8, 1);
+insert into roomoccupant (assignment_id, occupant_id) values (8, 2);
+
+
+update guest set category_id = 2 where guest_id = 12;
+
+update reservation set check_in_date = '2025-07-03', check_out_date = '2025-07-05' where res_id = 15;
+
+update roomassignment set check_in = '2025-07-03', check_out = '2025-07-05' where assignment_id = 8;
+
+insert into servicecharge (service_id, res_id, service_type, amount, charge_date)
+values (7, 15, 'room service', 25.00, '2025-07-04');
+
+update roomassignment set check_out = '2025-07-05' where assignment_id = 8;
+
+insert into bill (bill_id, issue_date, total_amount, is_paid, res_id)
+values (5, '2025-07-05', 353.50, true, 15);
+
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (17, '2025-07-10', '2025-07-12', 12, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (17, 1, 1);
+
+insert into bill (bill_id, issue_date, total_amount, is_paid, res_id)
+values (6, '2025-07-12', 193.50, true, 17);

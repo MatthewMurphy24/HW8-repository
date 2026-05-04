@@ -1,0 +1,23 @@
+
+alter table hotelphone       drop constraint if exists fk_hotelphone_hotel;
+alter table hotelfeature     drop constraint if exists fk_hotelfeature_hotel;
+alter table hotelseason      drop constraint if exists fk_hotelseason_hotel;
+alter table hotelseason      drop constraint if exists fk_hotelseason_season;
+alter table roomtype         drop constraint if exists fk_roomtype_hotel;
+alter table roomtypefeature  drop constraint if exists fk_roomtypefeature_roomtype;
+alter table room             drop constraint if exists fk_room_roomtype;
+alter table price            drop constraint if exists fk_price_roomtype;
+alter table price            drop constraint if exists fk_price_season;
+alter table guest            drop constraint if exists fk_guest_category;
+alter table reservation      drop constraint if exists fk_reservation_guest;
+alter table reservation      drop constraint if exists fk_reservation_hotel;
+alter table reservationroomtype drop constraint if exists fk_reservationroomtype_res;
+alter table reservationroomtype drop constraint if exists fk_reservationroomtype_type;
+alter table reservationoccupant drop constraint if exists fk_reservationoccupant_res;
+alter table reservationoccupant drop constraint if exists fk_reservationoccupant_occupant;
+alter table roomassignment   drop constraint if exists fk_roomassignment_res;
+alter table roomassignment   drop constraint if exists fk_roomassignment_room;
+alter table roomoccupant     drop constraint if exists fk_roomoccupant_assignment;
+alter table roomoccupant     drop constraint if exists fk_roomoccupant_occupant;
+alter table bill             drop constraint if exists fk_bill_reservation;
+alter table servicecharge    drop constraint if exists fk_servicecharge_reservation;
