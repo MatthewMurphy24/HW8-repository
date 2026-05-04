@@ -18,9 +18,9 @@
 ## Database creation
 *Link the files here*
 
-- Drop tables: [drop.sql](./database/drop.sql)
-- Create tables: [create.sql](./database/alter.sql)
-- Add constraints to tables: [alter.sql](./database/alter.sql)
+- Drop tables: [drop_fk.sql](./drop_fk.sql)
+- Create tables: [create.sql](./create.sql)
+- Add constraints to tables: [add_fk.sql](./add_fk.sql)
 
 *They should be in a subdirectory called database*
 
@@ -31,9 +31,7 @@ We changed the scripts to match updated model shown in previous section.
 ## Data
 *Link the files here*
 
-- Add some data from csv files: [load.sql](./data/load.sql)
-     - [room.csv](./data/room.csv)
-- Add some data from using Python and faker: [generate.py](./data/generate.py)
+- Load generated fake data: [load_data.sql](./load_data.sql)
 
 *They should be in a subdirectory called data*
 
