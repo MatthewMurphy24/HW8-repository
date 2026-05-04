@@ -1,0 +1,4 @@
+"reserver_id","role","first_name","last_name"
+"P222222","reserver",NULL,NULL
+NULL,"occupant","jane","smith"
+NULL,"occupant","john","smith"
