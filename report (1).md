@@ -42,26 +42,33 @@ We changed the data to facilitate the queries, as described in the following sec
 ## Queries
 
 ### Query 1
-- [query1.sql](./query1.sql)
+- [Query 1](./query1.sql)
+- [Results](./q1.csv)
 
 *Describe the queries in detail with screenshots of the data setup and the results*
 
 ### Query 2
-- [query2.sql](./query2.sql)
+- [Query 2](./query2.sql)
+- [Results](./q2.csv)
 
-*Describe the queries in detail with screenshots of setup and results*
+*Describe the queries in detail with screenshots of the data setup and the results*
 
 ### Query 3
-- [query3.sql](./query3.sql)
+- [Query 3](./query3.sql)
+- [Results](./q3.csv)
 
-*Describe the queries in detail with screenshots of setup and results*
+*Describe the queries in detail with screenshots of the data setup and the results*
 
 ### Query 4
-- [query4.sql](./query4.sql)
+- [Query 4](./query4.sql)
+- [Results](./q4.csv)
 
-*Describe the queries in detail with screenshots of setup and results*
+*Describe the queries in detail with screenshots of the data setup and the results*
 
 ### Query 5
-- [query5.sql](./query5.sql)
+- [Query 5](./query5.sql)
+- [Results](./q5.csv)
 
-*Describe the queries in detail with screenshots of setup and results*
+*Describe the queries in detail with screenshots of the data setup and the results*
+
+
