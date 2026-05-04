@@ -2,15 +2,12 @@
 Matthew Murphy
 
 ## ER Model
-![conference review EER](./images/ConferenceReviewEER.drawio.png)
+ADD ER MODEL HERE
 
 ---
 
 ## Relational Model
 
-- Conference Review System: ![conference review relational model](./images/ConferenceReviewRelational-mysql.png)
-- madiSTEM System: ![madistem relational model - Workbench style](./images/madistem-relational.png)
-- madiSTEM System (dbdiagram style): ![madistem relational model - dbdiagram style](./images/schema.png)
 - ER-to-Relational Mapping: ![relational model](./images/model1.png)
 
 ---
