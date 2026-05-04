@@ -1,5 +1,5 @@
 # CS374 Hotel Database Final Report
-*your names*
+Matthew Murphy
 
 ## ER Model
 *insert the image here*
@@ -51,7 +51,7 @@ We changed the data to facilitate the queries, as described in the following sec
 **Results**
 ![Query 1 Results](./q1ss.png)
 
-*Describe the queries in detail with screenshots of the data setup and the results*
+This query finds all room types available at Hotel A between July 15–17. It checks availability by comparing total rooms to already reserved rooms during those dates. It also calculates the average nightly price based on the season, day of the week, and guest discount.
 
 ---
 
@@ -65,7 +65,7 @@ We changed the data to facilitate the queries, as described in the following sec
 **Results**
 ![Query 2 Results](./q2ss.png)
 
-*Describe the queries in detail with screenshots of the data setup and the results*
+This query finds all unoccupied rooms. It excludes rooms that are already assigned during the given time period.
 
 ---
 
@@ -79,7 +79,7 @@ We changed the data to facilitate the queries, as described in the following sec
 **Results**
 ![Query 3 Results](./q3ss.png)
 
-*Describe the queries in detail with screenshots of the data setup and the results*
+This query generates a bill for a reservation. It includes the room cost adjusted by day of the week and guest discount, and any extra service charges,\ to calculate the final total.
 
 ---
 
@@ -90,7 +90,7 @@ We changed the data to facilitate the queries, as described in the following sec
 **Results**
 ![Query 4 Results](./q4ss.png)
 
-*Describe the queries in detail with screenshots of the results*
+This query lists the people in the reservaton.
 
 ---
 
@@ -104,6 +104,6 @@ We changed the data to facilitate the queries, as described in the following sec
 **Results**
 ![Query 5 Results](./q5ss.png)
 
-*Describe the queries in detail with screenshots of the data setup and the results*
+This query calculates the total amount a guest spent over a one-year period by summing all bills associated with their reservations.
 
 
