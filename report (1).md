@@ -46,8 +46,7 @@ We changed the data to facilitate the queries, as described in the following sec
 ### Query 1
 *Link the code file(s) here from subdirectory queries*
 
-For example:
-- [workshop_leader.py](./queries/workshop_leader.py)
+- [query1.sql](./query1.sql)
 
 *Describe the queries in detail with screenshots of the data setup and the results*
 
