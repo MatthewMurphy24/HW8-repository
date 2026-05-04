@@ -44,28 +44,26 @@ We changed the data to facilitate the queries, as described in the following sec
 ## Queries
 
 ### Query 1
-*Link the code file(s) here from subdirectory queries*
-
 - [query1.sql](./query1.sql)
 
 *Describe the queries in detail with screenshots of the data setup and the results*
 
 ### Query 2
-*Link the code file(s) here from subdirectory queries*
+- [query2.sql](./query2.sql)
 
 *Describe the queries in detail with screenshots of setup and results*
 
 ### Query 3
-*Link the code file(s) here from subdirectory queries*
+- [query3.sql](./query3.sql)
 
 *Describe the queries in detail with screenshots of setup and results*
 
 ### Query 4
-*Link the code file(s) here from subdirectory queries*
+- [query4.sql](./query4.sql)
 
 *Describe the queries in detail with screenshots of setup and results*
 
 ### Query 5
-*Link the code file(s) here from subdirectory queries*
+- [query5.sql](./query5.sql)
 
 *Describe the queries in detail with screenshots of setup and results*
