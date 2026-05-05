@@ -87,9 +87,15 @@ After check-in, only room 206 remains unoccupied — rooms 204 and 205 are now t
 - [Query 3](./queries/query3.sql)
 - [Results](./data/q3.csv)
 
+Before running, Mrs. Smith is Regular category with no discount and her stay is still at the original dates.
+
+![Before](./images/q3Before1.png)
+
+The script upgrades her to Gold (10% discount), shifts her dates to July 3–5, adds a $25 service charge, and checks her out with a final bill.
+
 ![Result](./images/q3ss.png)
 
-This query generates a bill for a reservation. It includes the room cost adjusted by day of the week and guest discount, and any extra service charges to calculate the final total.
+The bill shows $328.50 in room charges (2 nights with Gold discount applied) plus $25 in extras for a grand total of $353.50.
 
 ---
 
@@ -97,9 +103,11 @@ This query generates a bill for a reservation. It includes the room cost adjuste
 - [Query 4](./queries/query4.sql)
 - [Results](./data/q4.csv)
 
+Looks up who is associated with room 205 on July 3, 2025 — both the person who booked it and whoever was physically checked in.
+
 ![Result](./images/q4ss.png)
 
-This query lists the people in the reservation.
+The result shows Mrs. Smith (P222222) as the reserver, with Jane Smith and John Smith as the two occupants.
 
 ---
 
@@ -107,6 +115,8 @@ This query lists the people in the reservation.
 - [Query 5](./queries/query5.sql)
 - [Results](./data/q5.csv)
 
+Mrs. Smith has two reservations in 2025 — one at Hotel B ($320) and one at Hotel A ($227) — across two separate stays.
+
 ![Result](./images/q5ss.png)
 
-This query calculates the total amount a guest spent over a one-year period by summing all bills associated with their reservations.
+The query sums both bills, returning a total of $547.00 spent in 2025 under passport number P222222.
