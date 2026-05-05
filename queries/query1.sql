@@ -10,22 +10,25 @@ where not exists (select 1 from guest where guest_id = 1);
 
 commit;
 
-select roomtype.type_id, roomtype.room_name,
+select roomtype.type_id, roomtype.room_name, season.name as season_name,
     avg(price.amount * (1 - guestcategory.discount / 100.0)) as avg_cost_per_night
 from roomtype
 join price on price.type_id = roomtype.type_id
+join season on season.season_id = price.season_id
+join hotelseason on hotelseason.season_id = season.season_id and hotelseason.hotel_id = roomtype.hotel_id
 join guestcategory on guestcategory.name = 'Gold'
 where roomtype.hotel_id = 1
-  and price.season_id = 1
+  and date '2025-07-15' >= season.start_date and date '2025-07-16' <= season.end_date
   and price.day_of_week in ('tuesday', 'wednesday')
   and (select count(*) from room where room.type_id = roomtype.type_id)
-    > (select count(*) from reservationroomtype
-       join reservation on reservation.res_id = reservationroomtype.res_id
-       where reservationroomtype.type_id = roomtype.type_id
+    > (select coalesce(sum(rrt.quantity), 0)
+       from reservationroomtype rrt
+       join reservation on reservation.res_id = rrt.res_id
+       where rrt.type_id = roomtype.type_id
          and reservation.hotel_id = 1
          and reservation.check_in_date < '2025-07-17'
          and reservation.check_out_date > '2025-07-15')
-group by roomtype.type_id, roomtype.room_name
+group by roomtype.type_id, roomtype.room_name, season.name
 order by avg_cost_per_night;
 
 
