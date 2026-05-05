@@ -150,3 +150,31 @@ create table servicecharge (
     amount decimal(10,2),
     charge_date date
 );
+
+create index idx_room_type_id
+on room (type_id);
+
+create index idx_price_type_season_day
+on price (type_id, season_id, day_of_week);
+
+create index idx_reservation_hotel_dates
+on reservation (hotel_id, check_in_date, check_out_date);
+
+create index idx_reservationroomtype_type_res
+on reservationroomtype (type_id, res_id);
+
+create index idx_roomassignment_room_dates
+on roomassignment (room_num, check_in, check_out);
+
+create index idx_roomassignment_res
+on roomassignment (res_id);
+
+create index idx_servicecharge_res
+on servicecharge (res_id);
+
+create view v_room_occupancy as
+select
+    room_num,
+    check_in,
+    coalesce(check_out, 'infinity'::date) as check_out
+from roomassignment;
