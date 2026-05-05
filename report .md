@@ -8,7 +8,12 @@ Matthew Murphy
 
 ## Relational Model
 
-- ER-to-Relational Mapping: ![relational model](./images/model1.png)
+- ER-to-Relational Mapping: ![relational model](./images/model2.png)
+
+Changes Made:
+- Changed "Spa Charge" to "ServiceCharge"
+- Added HotelPhone, HotelFeature, and RoomTypeFeature
+- Added extra foreign keys and changed tables to make relational mapping more consistent with ER Model
 
 ---
 
