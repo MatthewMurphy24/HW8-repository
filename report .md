@@ -8,7 +8,7 @@ Matthew Murphy
 
 ## Relational Model
 
-- ER-to-Relational Mapping: ![relational model](./images/model2.png)
+- ER-to-Relational Mapping: ![relational model](./images/m2.png)
 
 Changes Made:
 - Changed "Spa Charge" to "ServiceCharge"
