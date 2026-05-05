@@ -73,7 +73,7 @@ The result shows only the single room type with an average nightly price reflect
 
 Before running, Mrs. Smith already has a reservation at Hotel B (res_id 15), and all 3 double rooms (204, 205, 206) are unoccupied.
 
-![Before](./images/q2Before1.png)
+![Before](./images/q2Before2.png)
 
 The script finds those available double rooms, checks in Mr. Smith as a new occupant, assigns room 204 to him, and puts both Smiths in room 205 under Mrs. Smith's reservation.
 
