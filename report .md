@@ -115,6 +115,8 @@ The result shows Mrs. Smith (P222222) as the reserver, with Jane Smith and John 
 - [Query 5](./queries/query5.sql)
 - [Results](./data/q5.csv)
 
+![Result](./images/q5Before1.png)
+
 Mrs. Smith has two reservations in 2025 — one at Hotel B ($320) and one at Hotel A ($227) — across two separate stays.
 
 ![Result](./images/q5ss.png)
