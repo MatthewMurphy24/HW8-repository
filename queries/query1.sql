@@ -15,3 +15,25 @@ where roomtype.hotel_id = 1
          and reservation.check_out_date > '2025-07-15')
 group by roomtype.type_id, roomtype.room_name
 order by avg_cost_per_night;
+
+
+update price set amount = 50
+where type_id = 1 and season_id = 1 and day_of_week = 'wednesday';
+
+update price set amount = 100
+where type_id = 2 and season_id = 1 and day_of_week = 'wednesday';
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (13, '2025-07-15', '2025-07-17', 1, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (13, 2, 3);
+
+insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone, category_id)
+values (11, 'passport', 'P111111', '1 Main St', '111-1111', '222-2222', 2);
+
+insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_id)
+values (14, '2025-07-15', '2025-07-17', 11, 1);
+
+insert into reservationroomtype (res_id, type_id, quantity)
+values (14, 1, 1);
