@@ -19,16 +19,28 @@ where reservation.res_id = 15
 group by reservation.check_in_date, reservation.check_out_date, roomtype.room_name, roomtypefeature.feature;
 
 
+begin;
+
 update guest set category_id = 2 where guest_id = 12;
 
 update reservation set check_in_date = '2025-07-03', check_out_date = '2025-07-05' where res_id = 15;
 
 update roomassignment set check_in = '2025-07-03', check_out = '2025-07-05' where assignment_id = 8;
 
+commit;
+
+begin;
+
 insert into servicecharge (service_id, res_id, service_type, amount, charge_date)
 values (7, 15, 'room service', 25.00, '2025-07-04');
+
+commit;
+
+begin;
 
 update roomassignment set check_out = '2025-07-05' where assignment_id = 8;
 
 insert into bill (bill_id, issue_date, total_amount, is_paid, res_id)
 values (5, '2025-07-05', 353.50, true, 15);
+
+commit;

@@ -221,10 +221,10 @@ insert into guest (guest_id, id_type, id_num, address, home_phone, mobile_phone,
 (7,  'passport', 'P1007', '70 Birch Blvd, Phoenix, AZ',  '602-111-0007', '602-222-0007', 1),
 (8,  'license',  'L1008', '80 Walnut Way, Seattle, WA',  '206-111-0008', '206-222-0008', 2),
 (9,  'passport', 'P1009', '90 Spruce Ct, Denver, CO',    '720-111-0009', '720-222-0009', 1),
-(10, 'license',  'L1010', '100 Ash Pl, Boston, MA',      '617-111-0010', '617-222-0010', 1);
+(10, 'license',  'L1010', '100 Ash Pl, Boston, MA',      '617-111-0010', '617-222-0010', 1),
+(12, 'passport', 'P222222', '2 Oak St, New York, NY',      '212-111-0012', '212-222-0012', 1);
 
 insert into occupant (occupant_id, first_name, last_name) values
-(1,  'john',    'smith'),
 (2,  'jane',    'smith'),
 (3,  'alice',   'johnson'),
 (4,  'bob',     'johnson'),
@@ -249,6 +249,8 @@ insert into reservation (res_id, check_in_date, check_out_date, guest_id, hotel_
 (6,  '2026-06-15', '2026-06-18', 1, 4),
 (7,  '2025-07-15', '2025-07-17', 2, 2),
 (8,  '2025-12-20', '2025-12-23', 6, 1),
+(15, '2025-05-04', '2025-05-06', 12, 2),
+(17, '2025-06-15', '2025-06-17', 12, 1),
 (9,  '2026-04-10', '2026-04-12', 7, 3),
 (10, '2026-03-05', '2026-03-07', 8, 5),
 (11, '2026-02-10', '2026-02-11', 9, 4),
@@ -264,6 +266,8 @@ insert into reservationroomtype (res_id, type_id, quantity) values
 (7, 4, 1),
 (8, 2, 1),
 (9, 5, 1),
+(15, 4, 1),
+(17, 1, 1),
 (10, 10, 2),
 (11, 8, 1),
 (12, 9, 1);
@@ -272,15 +276,17 @@ insert into reservationoccupant (res_id, occupant_id) values
 (1, 3), (1, 4),
 (2, 4), (2, 6),
 (3, 5),
-(4, 1), (4, 2), (4, 7),
-(5, 1), (5, 2),
-(6, 1),
-(7, 1), (7, 2),
+(4, 2), (4, 7),
+(5, 2),
+(6, 2),
+(7, 2),
 (8, 8),
 (9, 9),
 (10, 10), (10, 11), (10, 12), (10, 13),
 (11, 13),
-(12, 14);
+(12, 14),
+(15, 2),
+(17, 2);
 
 insert into roomassignment (assignment_id, res_id, room_num, check_in, check_out) values
 (1, 1, 101, '2025-07-10', '2025-07-13'),
@@ -296,13 +302,15 @@ insert into roomoccupant (assignment_id, occupant_id) values
 (3, 4), (3, 6),
 (4, 4), (4, 6),
 (5, 5),
-(6, 1), (6, 2);
+(6, 2);
 
 insert into bill (bill_id, issue_date, total_amount, is_paid, res_id) values
 (1, '2025-07-13', 890.00,  true, 1),
 (2, '2025-07-22', 545.00,  true, 2),
 (3, '2025-08-03', 660.00,  true, 3),
-(4, '2025-07-17', 270.00,  true, 7);
+(4, '2025-07-17', 270.00,  true, 7),
+(5, '2025-05-06', 320.00,  true, 15),
+(6, '2025-06-17', 227.00,  true, 17);
 
 insert into servicecharge (service_id, res_id, service_type, amount, charge_date) values
 (1, 1, 'room service',  45.00, '2025-07-11'),

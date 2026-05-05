@@ -1,4 +1,6 @@
 
+drop view if exists v_room_occupancy;
+
 drop table if exists roomoccupant;
 drop table if exists roomassignment;
 drop table if exists reservationoccupant;
